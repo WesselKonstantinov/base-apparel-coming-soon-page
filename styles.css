@@ -97,7 +97,6 @@ select {
 
 /* || Global styles */
 body {
-  background: var(--gradient-white-to-sea-salt-sherbet);
   color: var(--color-desaturated-red);
   font-family: var(--font-family-primary);
   font-size: 0.875rem;
@@ -114,4 +113,28 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.page {
+  min-height: 100vh;
+  background: var(--gradient-white-to-sea-salt-sherbet);
+}
+
+/* || Header styles */
+.header {
+  padding: 2rem;
+}
+
+.header__link {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out 0s;
+}
+
+.header__link:hover {
+  transform: scale(1.15);
+}
+
+.header__logo {
+  width: 6.25rem;
+  height: 1.3125rem;
 }
