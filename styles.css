@@ -94,3 +94,12 @@ select {
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
 }
+
+/* || Global styles */
+body {
+  background: var(--gradient-white-to-sea-salt-sherbet);
+  color: var(--color-desaturated-red);
+  font-family: var(--font-family-primary);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+}
