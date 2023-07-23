@@ -1,33 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <a href="/" class="header__link">
+          <img
+            src="./images/logo.svg"
+            alt="Base Apparel - Home"
+            width="158"
+            height="33"
+            class="header__logo"
+          />
+        </a>
+      </header>
+      <aside aria-label="Image" class="complementary">
+        <picture class="complementary__image-container">
+          <source
+            srcset="./images/hero-desktop.jpg"
+            media="(min-width: 45rem)"
+          />
+          <img
+            src="./images/hero-mobile.jpg"
+            alt="A model with brown eyes and shoulder-length brown hair. She is wearing an orange blouse with buttons and has a bracelet on her right wrist."
+            width="375"
+            height="250"
+            class="complementary__image"
+          />
+        </picture>
+      </aside>
+      <main class="main">
+        <h1 class="main__title">
+          <span class="main__title-highlight">We're</span>
+          coming soon
+        </h1>
+        <p class="main__text">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form class="cta-form">
+          <label for="email" class="sr-only">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            placeholder="Email address"
+            aria-describedby="email-error"
+            aria-invalid="false"
+            required
+            class="cta-form__input"
+          />
+          <div
+            id="email-error"
+            aria-live="polite"
+            class="cta-form__error"
+          ></div>
+          <button type="submit" class="cta-form__submit">
+            <img
+              src="./images/icon-arrow.svg"
+              width="12"
+              height="20"
+              alt="Subscribe"
+              class="cta-form__submit-icon"
+            />
+          </button>
+        </form>
+      </main>
+    </div>
+  </body>
 </html>
