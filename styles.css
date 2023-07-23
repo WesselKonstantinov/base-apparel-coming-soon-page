@@ -101,6 +101,7 @@ body {
   font-family: var(--font-family-primary);
   font-size: 0.875rem;
   font-weight: var(--font-weight-regular);
+  line-height: 1.57;
 }
 
 .sr-only {
@@ -137,4 +138,74 @@ body {
 .header__logo {
   width: 6.25rem;
   height: 1.3125rem;
+}
+
+/* || Complementary image styles */
+.complementary__image {
+  width: 100%;
+  height: auto;
+}
+
+/* || Main content styles */
+.main {
+  padding: 4rem 2rem 5.75rem;
+  text-align: center;
+}
+
+.main__inner {
+  max-width: 23.4375rem;
+  margin-inline: auto;
+}
+
+.main__inner > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.main__title {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-light);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.27em;
+}
+
+.main__title-highlight {
+  color: var(--color-dark-grayish-red);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cta-form {
+  --flow-space: 2rem;
+  position: relative;
+}
+
+.cta-form__input {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--color-desaturated-red);
+  border-radius: 1.75rem;
+  background: transparent;
+  opacity: 0.5;
+}
+
+.cta-form__input::placeholder {
+  text-transform: capitalize;
+  color: var(--color-desaturated-red);
+}
+
+.cta-form__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--gradient-spanish-pink-to-flamingo-dream);
+  border: none;
+  border-radius: 1.75rem;
+  box-shadow: 0 1.25rem 2rem hsl(0 36% 70% / 0.5);
+  padding: 0.875rem 1.625rem;
+  cursor: pointer;
+}
+
+.cta-form__submit-icon {
+  width: 0.75rem;
+  height: 1.25rem;
 }
