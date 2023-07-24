@@ -223,7 +223,8 @@ body {
 
   .page {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10.17625rem 1fr;
     grid-template-areas:
       "header image"
       "main image";
@@ -260,7 +261,7 @@ body {
 
   .main__title {
     font-size: 3.25rem;
-    line-height: 1.1;
+    line-height: 1;
   }
 
   .cta-form__input {
@@ -277,6 +278,17 @@ body {
     max-width: 90rem;
     margin-inline: auto;
     grid-template-columns: 1fr auto;
+    gap: 4.45rem;
+  }
+
+  .header {
+    padding: 0 0 0 10.3125rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .main {
+    padding: 0 0 0 10.3125rem;
   }
 
   .main__title {
