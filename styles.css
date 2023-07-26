@@ -181,11 +181,14 @@ body {
 
 .cta-form__input {
   width: 100%;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid var(--color-desaturated-red);
+  padding: 0.6875rem 1.5rem 0.5625rem;
+  border: none;
+  outline: 1px solid var(--color-desaturated-red);
+  outline-offset: -1px;
   border-radius: 1.75rem;
   background: transparent;
   color: var(--color-dark-grayish-red);
+  line-height: 2;
 }
 
 .cta-form__input::placeholder {
@@ -194,26 +197,60 @@ body {
   opacity: 0.5;
 }
 
+[aria-invalid="true"] {
+  outline: 2px solid var(--color-soft-red);
+  outline-offset: -2px;
+  background-image: url("./images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-size: 1.5rem 1.5rem;
+  background-position: right 4.5rem center;
+}
+
 .cta-form__submit {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
   background: var(--gradient-spanish-pink-to-flamingo-dream);
   border: none;
   border-radius: 1.75rem;
   box-shadow: 0 0.9375rem 1.25rem hsl(0 44% 60% / 0.25);
   padding: 0.875rem 1.625rem;
+  overflow: hidden;
   cursor: pointer;
-  transition: opacity 0.2s ease-out 0s;
 }
 
-.cta-form__submit:hover {
-  opacity: 0.5;
+.cta-form__submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: hsl(1 62% 86%);
+  z-index: -1;
+  transition: opacity 0.2s ease-out 0s;
+  opacity: 0;
+}
+
+.cta-form__submit:hover::before {
+  opacity: 1;
 }
 
 .cta-form__submit-icon {
   width: 0.75rem;
   height: 1.25rem;
+}
+
+.cta-form__error {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.cta-form__error-message {
+  text-align: left;
+  font-size: 0.8125rem;
+  color: var(--color-soft-red);
 }
 
 @media (min-width: 45rem) {
@@ -270,11 +307,20 @@ body {
   }
 
   .cta-form__input {
-    padding: 0.8125rem 2rem;
+    padding: 0.9375rem 2rem 0.8125rem;
+    line-height: 1.75;
+  }
+
+  [aria-invalid="true"] {
+    background-position: right 7.25rem center;
   }
 
   .cta-form__submit {
     padding: 1.125rem 2.75rem;
+  }
+
+  .cta-form__error {
+    padding-left: 2rem;
   }
 }
 
