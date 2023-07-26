@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
@@ -57,7 +58,7 @@
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </p>
-          <form class="cta-form">
+          <form novalidate class="cta-form js-form">
             <label for="email" class="sr-only">Email</label>
             <input
               type="email"
@@ -68,12 +69,12 @@
               aria-describedby="email-error"
               aria-invalid="false"
               required
-              class="cta-form__input"
+              class="cta-form__input js-input"
             />
             <div
               id="email-error"
               aria-live="polite"
-              class="cta-form__error"
+              class="cta-form__error js-error"
             ></div>
             <button type="submit" class="cta-form__submit">
               <img
