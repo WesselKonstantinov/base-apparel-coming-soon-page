@@ -116,6 +116,13 @@ body {
   border-width: 0;
 }
 
+:is(a, input, button):focus-visible {
+  outline: 0.2rem solid var(--color-dark-grayish-red);
+  outline-offset: 0.2rem;
+}
+
+/* || Page container styles */
+
 .page {
   min-height: 100vh;
   background-image: var(--gradient-white-to-sea-salt-sherbet);
