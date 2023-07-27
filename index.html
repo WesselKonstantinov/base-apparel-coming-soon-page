@@ -69,6 +69,7 @@
               aria-describedby="email-error"
               aria-invalid="false"
               required
+              data-touched="false"
               class="cta-form__input js-input"
             />
             <div
@@ -86,6 +87,12 @@
               />
             </button>
           </form>
+          <div role="alert" class="success success--hidden js-success">
+            <h2 class="success__title">Thank you for subscribing!</h2>
+            <p class="success__text">
+              We've sent you a confirmation email with all the details.
+            </p>
+          </div>
         </div>
       </main>
     </div>
