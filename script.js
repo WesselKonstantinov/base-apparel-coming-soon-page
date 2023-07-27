@@ -54,6 +54,6 @@ form.addEventListener("submit", (e) => {
     emailField.focus();
   } else {
     form.hidden = true;
-    successBlock.classList.replace("success--hidden", "success--visible");
+    successBlock.classList.remove("success--hidden");
   }
 });

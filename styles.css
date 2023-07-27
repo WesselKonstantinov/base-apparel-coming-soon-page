@@ -264,18 +264,18 @@ body {
   color: var(--color-soft-red);
 }
 
-.success {
+.success-container {
   --flow-space: 2rem;
+}
+
+.success {
+  visibility: visible;
   transition: opacity 0.5s linear, visibility 0.3s linear;
 }
 
 .success--hidden {
   visibility: hidden;
   opacity: 0;
-}
-
-.success--visible {
-  visibility: visible;
 }
 
 .success__title {
